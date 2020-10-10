@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Linha 7 importante para aplicar a propiedade css @media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+    <div id="page-home">
+        <div class="content">
+            <main>
+                <img src="/assets/images/logo.png" alt="Logomarca">
+                <h2>Faça login na GreenTech</h2>
+                <label for="user">Usuário</label>
+                <input type="text" name="user" id="user" required> <br>
+                <label for="password"> Senha <a href="">Esqueci a senha!</a> </label>
+                <input type="password" name="senha" id="senha" required>
+                <button type="button" class="botaoAcesso" onclick="acesso()">Acessar</button>
+                <header>
+                    <p>Novo na GreenTech? <a href="cadastro.html">Crie sua conta.</a> </p>
+                </header>
+
+                <script language="javascript" type="text/javascript">
+                    function acesso() {
+                        var nome = document.getElementById('user');
+                        var senha = document.getElementById('senha')
+
+                        if (user != "") {
+                            alert("Por Favor, Informe o Seu Nome!")
+                            user.focus();
+                            return;
+                        }
+
+                        if (senha == "") {
+                            alert("Por Favor, Informe a Sua Senha!")
+                            user.focus();
+                            return;
+                        }
+
+                        alert("Cadastro Realizado!"); 
+                    }
+                    </script>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

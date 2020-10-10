@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--@joaounipar-->
+<html lang="pt-br" dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>Efetue o Login Para Acesso</title>
+		<link rel="stylesheet" href="/styles/loginteste.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+
+		
+	<!-- início da área do formulário-->
+		<div class="formulario">
+			<!--inicio do formulario de login-->
+			<formulario class="login-formulario" action="" method="post">
+				<i class="usuario"></i>
+				<input class="usuario-input" type="text" name="" placeholder="Usuário" required>
+				<input class="usuario-input" type="password" name="" placeholder="Senha" required>
+				<div class="opcao-01">
+					<label class="lembrarSenha"><input type="checkbox" name="">Lembrar Senha</label>
+					<a href="#">Esqueceu a Senha?</a>
+				</div>
+				<input class="btn" type="submit" name="" value="LOGIN">
+				<div class="opcao-02">
+					<p>Não Cadastrado? <a href="#">Criar Conta</a></p>
+				</div>
+			</formulario>
+			<!--fim do formulario de login-->
+			<!--inicio formulario de inscrição-->
+			<formulario class="inscricao-formulario" action="" method="post">
+				<i class="usuarioPlus"></i>
+				<input class="usuario-input" type="text" name="" placeholder="Usuário" required>
+				<input class="usuario-input" type="email" name="" placeholder="Endereço de Email" required>
+				<input class="usuario-input" type="password" name="" placeholder="Senha" required>
+				<input class="btn" type="submit" name="" value="INSCREVER-SE">
+				<div class="opcao-02">
+					<p>Alterar Cadastro? <a href="#">Entrar</a></p>
+				</div>
+			</formulario>
+			<!--fim formulario de inscrição-->
+		</div>
+		<!--chega de formularios-->
+		<!--script para alternar entre login e inscrição-->
+		<script type="text/javascript">
+		$('.opcao-02 a').click(function(){
+			$('formulario').animate({
+				height: "toggle", opacity: "toggle"
+			}, "slow");
+		});
+		</script>
+
+	</body>
+</html>

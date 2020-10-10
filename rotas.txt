@@ -1,0 +1,4 @@
+<route path="index" = {index}/>
+<route path="index/crie_sua_conta" = {cadastro}/>
+<route path="index/acessar" = {dashboard}/>
+<route path="dashboard/..." = {...}/>

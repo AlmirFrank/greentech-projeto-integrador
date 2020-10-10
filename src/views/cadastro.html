@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Linha 7 importante para aplicar a propiedade css @media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Cadastro</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cadastro.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+    <!-- <script type="text/javascript" src="/controllers/cadastroController.js"></script> -->
+    <div id="page-cadastro">
+        <header>
+            <img src="/assets/images/logo.png" alt="Logomarca">
+            <a href="index.html">
+                <span></span> Voltar para home
+            </a>
+        </header>
+
+        <script src="/controllers/jquery-3.5.1.min.js"></script>
+        <script src="/controllers/input-mask.js"></script>
+
+        <!-- Formulário -->
+        <form data-parsley-validate name="dadosCadastro" method="post" action="paginaacao" onsubmit="return enviarDados(this);">
+            <h1>Cadastre-se aqui</h1>
+            <fieldset>
+                <legend>
+                    <h2>Informe seus dados</h2>
+                </legend>
+                <div class="field">
+                    <label for="user">Nome de Usuário</label>
+                    <input type="text" name="user" id="user">
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="Ex.: (00) 00000-0000">
+                    </div>
+                    <div class="field">
+                        <label for="sexo">Genêro</label>
+                        <select name="sexo">
+                        <option>Selecione um Genêro</option>
+                        <option value="m">Masculino</option>
+                        <option value="f">Feminino</option>
+                        <option value="mt">Transgênero</option>
+                        <option value="ft">Transexual</option>
+                        <option value="c">Cisgênero</option>
+                        <option value="n">Não sei responder</option>
+                        <option value="x">Prefiro Não Informar</option>
+                        <option value="z">Outros</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="Ex.: 000.000.000-00">
+                    </div>
+                    <div class="field">
+                        <label for="rg">RG</label>
+                        <input type="text" name="rg" id="rg" placeholder="Ex.: 00.000.000-0">
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Ex.: greenteech@email.com">
+                    </div>
+                    <div class="field">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">
+                <button type="button" class="botaoGerente" onclick="cadastrar()">Novo Gerente</button>
+                <button type="button" class="botaoFuncionario" onclick="cadastrar()">Novo Funcionário</button>
+            </div>
+        </form>
+    </div>
+    
+    <script language="javascript" type="text/javascript">
+        function cadastrar() {
+            var user = dadosCadastro.user.value;
+            var telefone = dadosCadastro.telefone.value;
+            var cpf = dadosCadastro.cpf.value;
+            var rg = dadosCadastro.rg.value;
+            var email = dadosCadastro.email.value;
+            var senha = dadosCadastro.sexo.value;
+        
+            if (user == "") {
+                alert("Por Favor, Informe o Seu Nome!")
+                dadosCadastro.user.focus();
+                return false;
+            }
+        
+            if (telefone == "") {
+                alert("Por Favor, Insira um Número para Contato!")
+                dadosCadastro.telefone.focus();
+                return false;
+            }
+        
+            if (cpf == "") {
+                alert("Por Favor, Insira um CPF Válido!")
+                dadosCadastro.cpf.focus();
+                return false;
+            }
+        
+            if(email.indexOf("@") == -1 ||
+              email == "" || email == null) {
+                alert("Por Favor, Informe um E-mail Válido!");
+                dadosCadastro.email.focus();
+                return false;
+            }
+        
+            if (senha == "") {
+                alert("Por Favor, Insira uma Senha Válida!")        
+                dadosCadastro.senha.focus();
+                return false;
+    }
+            alert("Cadastro Realizado!"); 
+        }
+        </script>
+
+</body>
+</html>

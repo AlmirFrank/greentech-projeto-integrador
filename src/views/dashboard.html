@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>DashBoard e-Gestor</title>
+		<link rel="stylesheet" href="/styles/dashboard.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<!--wrapper iniciar-->
+		<div class="wrapper">
+			<!--iniciar cabecalho de menu-->
+			<div class="cabecalho">
+				<div class="cabecalho-menu">
+					<div class="titulo">e-Gestor <span>GreenTech</span></div>
+					<div class="barraLateral-btn">
+						<i class="barras"></i>
+					</div>
+					<ul>
+						<li><a href="#"><i class="procurar"></i></a></li>
+						<li><a href="#"><i class="notificacoes"></i></a></li>
+						<li><a href="#"><i class="sair"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<!--encerrar cabecalho do menu-->
+			<!--barra lateral inicio-->
+			<div class="barraLateral">
+				<div class="barraLateral-menu">
+					<center class="perfil">
+						<img src="/assets/images/logo.png" alt="">
+						<p>UsuarioTeste</p>
+					</center>
+					<li class="item">
+						<a href="#" class="menu-btn">
+							<i class="areainicial"></i><span>Dashboard</span>
+						</a>
+					</li>
+					<li class="item" id="perfil">
+						<a href="#perfil" class="menu-btn">
+							<i class="circulo-usuario"></i><span>Perfil <i class="descerjanela"></i></span>
+						</a>
+						<div class="sub-menu">
+							<a href="#"><i class="OS"></i><span>Ordens de Serviço</span></a>
+							<a href="#"><i class="cartao-informacao"></i><span>Informações</span></a>
+						</div>
+					</li>
+					
+					<li class="item" id="mensagens">
+						<a href="#mensagens" class="menu-btn">
+							<i class="envelope"></i><span>Mensagens <i class="descerjanela"></i></span>
+						</a>
+						<div class="sub-menu">
+							<a href="#"><i class="envelopemensagem"></i><span>Nova Atividade</span></a>
+							<a href="#"><i class="envelopequadrado"></i><span>Enviar Atividade</span></a>
+							<a href="#"><i class="circuloexclamacao"></i><span>Atividades em Atraso</span></a>
+						</div>
+					</li>
+					<li class="item" id="configuracoes">
+						<a href="#configuracoes" class="menu-btn">
+							<i class="configurar"></i><span>Configurações <i class="descerjanela"></i></span>
+						</a>
+						<div class="sub-menu">
+							<a href="#"><i class="cadeado"></i><span>Senha</span></a>
+							<a href="#"><i class="permissoes"></i><span>Permissões</span></a>
+						</div>
+					</li>
+					<li class="item">
+						<a href="#" class="menu-btn">
+							<i class="circuloinformacoes"></i><span>Sobre</span>
+						</a>
+					</li>
+				</div>
+			</div>
+			<!--barralateral fim-->
+			<!--iniciar container principal(para links)-->
+			<div class="main-container">
+				<div class="cartao">
+					<form class="search-box" action="" method="">
+						<input type="text" name="" value="" placeholder="Busca">
+						<button class="search-btn" type="button" name="Botão">
+						 <i class="fas fa-search"></i>
+						</button> 
+				</div>
+			</div>
+			<!--finalizar container principal-->
+		</div>
+		<!--wrapper fim	-->
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".barraLateral-btn").click(function(){
+				$(".wrapper").toggleClass("collapse");
+			});
+		});
+		</script>
+
+	</body>
+</html>
