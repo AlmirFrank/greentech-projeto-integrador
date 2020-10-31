@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Linha 7 importante para aplicar a propiedade css @media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/cadastro-usuario.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <script type="text/javascript" src="/scripts/cadastroController.js"></script>
+    <script type="text/javascript" src="/scripts/input-mask.js"></script>
+    <script type="text/javascript" src="/scripts/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Formulário -->
+        <form action="index.html" id="formulario" method="POST" name="formulario">
+
+            <header>
+                <img src="/assets/images/logo.png" alt="Logomarca">
+                <a href="login.html">
+                    <span></span>Voltar para home
+                </a>
+            </header>
+
+            <legend>Cadastre-se Aqui</legend>
+
+            <div class="field-group">
+                <label for="user">Nome de Usuário</label>
+                <input type="text" name="user" id="user" placeholder="Insira o seu nome" required />
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Ex.: greenteech@email.com" required>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" placeholder="Ex.: 000.000.000-00">
+            </div>
+
+            <div class="colunas">
+                <div class="field-group">
+                    <label for="ramal">Ramal</label>
+                    <input type="number" name="ramal" id="ramal" placeholder="Ex.: 0000">
+                </div>
+
+                <div class="field-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Crie uma senha" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="button" class="botao" onclick="validar()">Cadastrar</button>
+            </div>
+        </form>
+
+        <script>
+            /* Função Validar */
+            function validar() {
+                // pegando o valor do nome pelos names
+                var nome = document.getElementById("nome");
+                var cpf = document.getElementById("cpf");
+                var email = document.getElementById("email");
+                var senha = document.getElementById("senha");
+                var telefone = document.getElementById("telefone");
+
+                // verificar se o nome está vazio
+                if (nome.value == "") {
+                    alert("Nome não informado");
+                    // Deixa o input com o focus
+                    nome.focus();
+                    // retorna a função e não olha as outras linhas
+                    return;
+                }
+                if (cpf.value == "") {
+                    alert("CPF não informado");
+                    cpf.focus();
+                    return;
+                }
+                if (email.value == "") {
+                    alert("E-mail não informado");
+                    email.focus();
+                    return;
+                }
+                if (senha.value == "") {
+                    alert("Senha não informada");
+                    senha.focus();
+                    return;
+                }
+                if (telefone.value == "") {
+                    alert("Telefone não informado");
+                    telefone.focus();
+                    return;
+                }
+                alert("Formulário enviado!");
+                // envia o formulário
+                //formulario.submit();
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

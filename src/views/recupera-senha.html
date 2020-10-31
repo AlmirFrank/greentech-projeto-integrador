@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Linha 7 importante para aplicar a propiedade css @media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/recupera-senha.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+    <div id="page-home">
+        <div class="content">
+            <main>
+                <img src="/assets/images/logo.png" alt="Logomarca">
+                <h2>Recuperar Senha</h2>
+
+                <form action="post" name="dados" id="cadastro" onSubmit="return enviardados();" >
+
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" required placeholder="Informe o seu E-mail"/> </br>
+                    
+                    <button type="submit" class="btnacesso" onclick="acesso ()">Enviar</button>
+
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

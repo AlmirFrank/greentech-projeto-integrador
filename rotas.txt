@@ -1,4 +1,7 @@
-<route path="index" = {index}/>
-<route path="index/crie_sua_conta" = {cadastro}/>
-<route path="index/acessar" = {dashboard}/>
-<route path="dashboard/..." = {...}/>
+<route path="login" = {login}/>
+<route path="login/crie_sua_conta" = {cadastro}/>
+<route path="login/esqueci_a_senha" = {recupera-senha}/>
+<route path="login/acessar" = {dashboard}/>
+<route path="dashboard/cadastro de documentos" = {cadastro-documentos}/>
+<route path="dashboard/controle de acesso a recursos" = {controle-de-acesso-recursos}/>
+<route path="dashboard/publicação e despublicação de documentos" = {publicacao-despublicacao-documentos}/>

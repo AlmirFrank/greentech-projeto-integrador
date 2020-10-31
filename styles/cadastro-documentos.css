@@ -1,0 +1,40 @@
+#page-cadastrodoc {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#page-cadastrodoc header {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-cadastrodoc header a {
+  color: #00BFFF;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#page-cadastrodoc header a span {
+  background-image: url('../assets/images/arrow-left.svg');
+  margin-right: 15px;
+  width: 20px;
+  height: 24px;
+  display: flex;
+}
+
+form {
+  background-color: #ADD8E6;
+  margin: 70px auto;
+  padding: 64px;
+  border-radius: 10px;
+  max-width: 1148px;
+}
+
+form h1 {
+  /* font-size: 36px; */
+  color: #fff;
+}

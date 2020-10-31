@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Acesso a Recursos</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/controle-de-acesso-recursos.css">
+  <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+
+<body>
+
+  <div id="page-controle">
+
+    <header>
+      <img src="/assets/images/logo.png" alt="Logomarca">
+      <a href="dashboard.html">
+        <span></span> Voltar para Dashboard
+      </a>
+    </header>
+
+    <form action="">
+
+      <h1>Controle de Acesso a Recursos</h1>
+
+      <nav class="nav_tabs">
+        <ul>
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab1" checked>
+            <label for="tab1">Dados</label>
+            <div class="content">
+              <article>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome"> <br>
+                <label for="empresa">Empresa: </label>
+                <input type="text" name="empresa" id="empresa"> <br>
+                <label for="setor">Setor: </label>
+                <input type="text" name="setor" id="setor"> <br>
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email"> <br>
+                <label for="senha">Senha de Acesso: </label>
+                <input type="text" name="senha" id="senha"> <br>
+                <label for="obs">Observações: </label>
+                <textarea name="obs" id="obs" cols="44" rows="5"></textarea> <br>
+                <button type="button">Novo</button>
+                <button type="button">Editar</button>
+                <button type="button">Cacelar</button> <br>
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+            <label for="tab2">Permissões</label>
+            <div class="content">
+              <article>
+                <div class="row">
+                  <div class="column" style="background-color:#aaa;">
+                    <h2>Acesso 001</h2>
+                  </div>
+                  <div class="column" style="background-color:#bbb;">
+                    <h2>Acesso 002</h2>
+                  </div>
+                  <div class="column" style="background-color:#aaa;">
+                    <h2>Acesso 003</h2>
+                  </div>
+                  <div class="column" style="background-color:#bbb;">
+                    <h2>Acesso 004</h2>
+                  </div>
+                </div>
+                <!-- <input type="text" name="acesso1" id="acesso1" disabled="disabled"> -->
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+            <label for="tab3">Grupos de Acesso</label>
+            <div class="content">
+              <article>
+                <div class="row">
+                  <div class="column" style="background-color:#aaa;">
+                    <h2>Grupos de Acesso 001</h2>
+                  </div>
+                  <div class="column" style="background-color:#bbb;">
+                    <h2>Grupos de Acesso 002</h2>
+                  </div>
+                  <div class="column" style="background-color:#aaa;">
+                    <h2>Grupos de Acesso 003</h2>
+                  </div>
+                  <div class="column" style="background-color:#bbb;">
+                    <h2>Grupos de Acesso 004</h2>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+            <label for="tab4">Recursos</label>
+            <div class="content">
+              <article>
+                <div class="row">
+                  <div class="column" style="background-color:#aaa;">
+                    <h2>Aqui vai uma breve descrição do recurso</h2>
+                  </div>
+                  <div class="column" style="background-color:#bbb;">
+                    <h2>Aqui vai uma breve descrição do recurso</h2>
+                  </div>
+                  <div class="column" style="background-color:#aaa;">
+                    <h2>Aqui vai uma breve descrição do recurso</h2>
+                  </div>
+                  <div class="column" style="background-color:#bbb;">
+                    <h2>Aqui vai uma breve descrição do recurso</h2>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+  </div>
+
+  </form>
+
+</body>
+
+</html>
